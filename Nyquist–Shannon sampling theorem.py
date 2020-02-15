@@ -30,16 +30,16 @@ nmin = ceil(tmin / T);
 nmax = floor(tmax / T);
 n = arange(nmin,nmax);
 x1 = cos(2*pi*n*T) + cos(2*pi*f*n*T);
-plot(n*T, x1, 'bo')
+plot(n*T, x1, 'ro')
 
 # sampling the signal with a sampling rate of 35 Hz
 # note that 35 Hz is under the Nyquist rate. (Aliasing)
-T = 1/35.0;
-nmin = ceil(tmin / T);
-nmax = floor(tmax / T);
-n = arange(nmin,nmax);
-x2 = cos(2*pi*n*T) + cos(2*pi*f*n*T);
-plot(n*T, x2, '-r.',markersize=8)
+#T = 1/35.0;
+#nmin = ceil(tmin / T);
+#nmax = floor(tmax / T);
+#n = arange(nmin,nmax);
+#x2 = cos(2*pi*n*T) + cos(2*pi*f*n*T);
+#plot(n*T, x2, '-r.',markersize=8)
 
 axis([-0.3, 0.3, -1.5, 2.3])
 show()
